@@ -1,0 +1,162 @@
+head
+    title Hola Jade
+
+body
+    +app
+
+template(name='app')
+    .app
+        .header
+        +addItem
+        .header
+        +itemHeader
+        +itemList
+
+
+template(name='addItem')
+    .add-item-container
+        .row
+            .column-big
+                input.input.name(placeholder='Nombre')
+            .column Talla 4
+            .column Talla 6
+            .column Talla 8
+            .column Talla 10
+            .column Talla 12
+            .column Talla 14
+            .column Talla S
+            .column Talla M
+            .column Talla L
+            .column Talla XL
+            .column Talla XXL
+            .column Talla 3XL
+        .row
+            .column-big Cantidad
+            .column
+                input.input.ct4(placeholder='0')
+            .column
+                input.input.ct6(placeholder='0')
+            .column
+                input.input.ct8(placeholder='0')
+            .column
+                input.input.ct10(placeholder='0')
+            .column
+                input.input.ct12(placeholder='0')
+            .column
+                input.input.ct14(placeholder='0')
+            .column
+                input.input.cts(placeholder='0')
+            .column
+                input.input.ctm(placeholder='0')
+            .column
+                input.input.ctl(placeholder='0')
+            .column
+                input.input.ctxl(placeholder='0')
+            .column
+                input.input.ctxxl(placeholder='0')
+            .column
+                input.input.ct3xl(placeholder='0')
+        .row
+            .column-big Precio
+            .column
+                input.input.pt4(placeholder='0')
+            .column
+                input.input.pt6(placeholder='0')
+            .column
+                input.input.pt8(placeholder='0')
+            .column
+                input.input.pt10(placeholder='0')
+            .column
+                input.input.pt12(placeholder='0')
+            .column
+                input.input.pt14(placeholder='0')
+            .column
+                input.input.pts(placeholder='0')
+            .column
+                input.input.ptm(placeholder='0')
+            .column
+                input.input.ptl(placeholder='0')
+            .column
+                input.input.ptxl(placeholder='0')
+            .column
+                input.input.ptxxl(placeholder='0')
+            .column
+                input.input.pt3xl(placeholder='0')
+
+        .row
+            .column-big Codigo
+            .column-big
+                input.input.code(placeholder='0')
+            .column-big
+                button.save Guardar
+
+template(name='itemHeader')
+    .add-item-container
+        .row
+            .column-big Nombre
+            .column Talla 4
+            .column Talla 6
+            .column Talla 8
+            .column Talla 10
+            .column Talla 12
+            .column Talla 14
+            .column Talla S
+            .column Talla M
+            .column Talla L
+            .column Talla XL
+            .column Talla XXL
+            .column Talla 3XL
+template(name="itemList")
+    each items
+        +item
+
+template(name='item')
+    .add-item-container
+        .row
+            .column-big.title #{name}
+            .column-big.title #{code}
+            .column-big.title
+                button.delete X
+        .row
+            .column-big Cantidad
+            .column #{t4.c}
+            .column #{t6.c}
+            .column #{t8.c}
+            .column #{t10.c}
+            .column #{t12.c}
+            .column #{t14.c}
+            .column #{ts.c}
+            .column #{tm.c}
+            .column #{tl.c}
+            .column #{txl.c}
+            .column #{txxl.c}
+            .column #{t3xl.c}
+        .row
+            .column-big Precio
+            .column #{t4.p}
+            .column #{t6.p}
+            .column #{t8.p}
+            .column #{t10.p}
+            .column #{t12.p}
+            .column #{t14.p}
+            .column #{ts.p}
+            .column #{tm.p}
+            .column #{tl.p}
+            .column #{txl.p}
+            .column #{txxl.p}
+            .column #{t3xl.p}
+        .row
+            .column-big Total
+            .column #{tt4}
+            .column #{tt6}
+            .column #{tt8}
+            .column #{tt10}
+            .column #{tt12}
+            .column #{tt14}
+            .column #{tts}
+            .column #{ttm}
+            .column #{ttl}
+            .column #{ttxl}
+            .column #{ttxxl}
+            .column #{tt3xl}
+
