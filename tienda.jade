@@ -2,13 +2,12 @@ head
     title Hola Jade
 
 body
-    +app
 
 template(name='app')
     .app
         .header
         +addItem
-        .header
+        +backup
         +itemHeader
         +itemList
 
@@ -110,6 +109,11 @@ template(name="itemList")
     each items
         +item
 
+template(name='backup')
+    .header
+        input.upload(type="file")
+        a.backup(href='/csv') Backup
+
 template(name='item')
     .add-item-container
         .row
@@ -119,32 +123,32 @@ template(name='item')
                 button.delete X
         .row
             .column-big Cantidad
-            .column #{t4.c}
-            .column #{t6.c}
-            .column #{t8.c}
-            .column #{t10.c}
-            .column #{t12.c}
-            .column #{t14.c}
-            .column #{ts.c}
-            .column #{tm.c}
-            .column #{tl.c}
-            .column #{txl.c}
-            .column #{txxl.c}
-            .column #{t3xl.c}
+            .column #{ct4}
+            .column #{ct6}
+            .column #{ct8}
+            .column #{ct10}
+            .column #{ct12}
+            .column #{ct14}
+            .column #{cts}
+            .column #{ctm}
+            .column #{ctl}
+            .column #{ctxl}
+            .column #{ctxxl}
+            .column #{ct3xl}
         .row
             .column-big Precio
-            .column #{t4.p}
-            .column #{t6.p}
-            .column #{t8.p}
-            .column #{t10.p}
-            .column #{t12.p}
-            .column #{t14.p}
-            .column #{ts.p}
-            .column #{tm.p}
-            .column #{tl.p}
-            .column #{txl.p}
-            .column #{txxl.p}
-            .column #{t3xl.p}
+            .column #{pt4}
+            .column #{pt6}
+            .column #{pt8}
+            .column #{pt10}
+            .column #{pt12}
+            .column #{pt14}
+            .column #{pts}
+            .column #{ptm}
+            .column #{ptl}
+            .column #{ptxl}
+            .column #{ptxxl}
+            .column #{pt3xl}
         .row
             .column-big Total
             .column #{tt4}
